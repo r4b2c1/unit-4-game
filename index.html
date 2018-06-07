@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>THINK CRYSTAL!!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">GAME TIME</h1>
+                  <p class="lead">HERE TO WIN NOT LOSE.</p>
+                </div>
+              </div>
+        <h1>GUESS THE NUMBER RIGHT: <span id="GUESS-THE-NUMBER"></span></h1>      
+       
+        <div id="CRYSTALS">
+
+            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
+        </div> 
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <script type="text/javascript">
+       
+       var targetNumber = 19;
+        
+        $("#GUESS-THE-NUMBER").text(targetNumber);
+
+        var CRYSTALS = $("#CRYSTALS");
+
+        var counter =0;
+
+        var numberOptions = [9, 10, 4, 5];
+        var increment = numberOptions[Math.round(Math.random())];
+
+        $("#CRYSTALS").on("click", ".crystal-image", function() {
+
+            counter += increment;
+
+            alert("New score: " + counter);
+
+            if (counter === targetNumber) {
+                alert("YOUR THE ONE!");
+            }
+
+            else if (counter >= targetNumber) {
+                alert("YOU CAME UP SHORT!!");
+            }
+
+        });    
+
+     </script>
+</body>
+</html>
