@@ -21,32 +21,39 @@
        
         <div id="CRYSTALS">
 
-            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
-            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
-            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
-            <img class="crystal-image" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" id="crystal1" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" id="crystal2" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" id="crystal3" src="assets/images/skull.jpg" alt="CRYSTALS">
+            <img class="crystal-image" id="crystal4" src="assets/images/skull.jpg" alt="CRYSTALS">
         </div> 
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
      <script type="text/javascript">
        
-       var targetNumber = 19;
+       var targetNumber =Math.floor(Math.random() *101) + 19;
+    //    Math.floor(Math.random() *12) + 1;
+        
         
         $("#GUESS-THE-NUMBER").text(targetNumber);
 
-        var CRYSTALS = $("#CRYSTALS");
-
         var counter =0;
+        var crystal1 =Math.floor(Math.random() *12) + 1;
+        var crystal2 =Math.floor(Math.random() *12) + 1;
+        var crystal3 =Math.floor(Math.random() *12) + 1;
+        var crystal4 =Math.floor(Math.random() *12) + 1;
 
-        var numberOptions = [9, 10, 4, 5];
-        var increment = numberOptions[Math.round(Math.random())];
+        // var numberOptions = [9, 10, 4, 5];
+        // var increment = numberOptions[Math.round(Math.random())];
 
-        $("#CRYSTALS").on("click", ".crystal-image", function() {
+        $("#CRYSTALS").on("click", "#crystal1", function() {
+            console.log(counter);
+            counter =crystal1+counter;
+            console.log(counter);
 
-            counter += increment;
+            // counter += increment;
 
-            alert("New score: " + counter);
+            // alert("New score: " + counter);
 
             if (counter === targetNumber) {
                 alert("YOUR THE ONE!");
