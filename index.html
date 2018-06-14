@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>THINK CRYSTAL!!!</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>THINK CRYSTAL!!!</title>
+    
 
 </head>
 <body>
@@ -30,6 +33,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
      <script type="text/javascript">
+      alert("TRY IT OUT");
        
        var targetNumber =Math.floor(Math.random() *101) + 19;
     //    Math.floor(Math.random() *12) + 1;
@@ -47,9 +51,9 @@
         // var increment = numberOptions[Math.round(Math.random())];
 
         $("#CRYSTALS").on("click", "#crystal1", function() {
-            console.log(counter);
-            counter =crystal1+counter;
-            console.log(counter);
+            console.log(counter)
+            counter =crystal1+counter
+            console.log(counter)
 
             // counter += increment;
 
@@ -63,7 +67,50 @@
                 alert("YOU CAME UP SHORT!!");
             }
 
-        });    
+        }); 
+        
+        $("#crystal").on("click", "#crystal2", function() {
+            console.log(counter)
+            counter +=crystal2
+            console.log(counter)
+
+            if (counter === targetNumber) {
+
+                alert("YOUR THE ONE!");
+            }
+
+            else if (counter >=targetNumber) {
+                alert("YOU CAME UP SHORT");
+            }
+        });
+
+        $("#crystal").on("click", "#crystal3", function() {
+            console.log(counter)
+            counter +=crystal3
+            console.log(counter)
+
+            if (counter === targetNumber) {
+                alert("YOUR THE ONE!");
+            }
+
+            else if (counter >=targetNumber) {
+                alert("YOU CAME UP SHORT");
+            }
+        });
+
+        $("#crystal").on("click", "#crystal4", function() {
+            console.log(counter)
+            counter +=crystal4
+            console.log(counter)
+
+            if (counter === targetNumber) {
+                alert("YOUR THE ONE!");
+            }
+
+            else if (counter >=targetNumber) {
+                alert("YOU CAME UP SHORT");
+            }
+        });
 
      </script>
 </body>
